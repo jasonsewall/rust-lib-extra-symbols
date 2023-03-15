@@ -11,3 +11,10 @@ crate-type=["cdylib"]
 
 [dependencies]
 lib1 = {path = "../lib1"}
+
+[profile.release]
+strip=true
+opt-level=3
+panic="abort"
+lto='fat'
+codegen-units=1
